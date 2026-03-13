@@ -32,4 +32,3 @@ system_hacking_fundamental/
 
 ## 🚀 Progress
 - https://dreamhack.io/lecture/paths/system-hacking-fundamental
- pwnable_lab pwnable_lab pwnable_lab pwnable_lab pwnable_lab pwnable_lab pwnable_lab pwnable_lab pwnable_lab pwnable_lab pwnable_lab pwnable_lab pwnable_lab pwnable_lab pwnable_lab pwnable_lab pwnable_lab pwnable_lab pwnable_lab pwnable_lab pwnable_lab pwnable_lab pwnable_lab
