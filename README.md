@@ -30,5 +30,6 @@ system_hacking_fundamental/
 - Develop exploit
 - Document reasoning
 
-## 🚀 Progress
-- https://dreamhack.io/lecture/paths/system-hacking-fundamental
+## 🚀 Progress Path
+- System Hacking Fundamental  
+https://dreamhack.io/lecture/paths/system-hacking-fundamental
