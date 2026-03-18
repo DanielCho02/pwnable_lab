@@ -1,4 +1,4 @@
-# 🧠 Concept: Memory Corruption_Stack Buffer Overflow
+# 🧠 Memory Corruption_Stack Buffer Overflow
 
 ## 📌 Definition
 Buffer: 데이터가 목적지로 이동되기 전에 보관되는 임시 저장소
