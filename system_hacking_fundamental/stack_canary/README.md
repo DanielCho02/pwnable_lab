@@ -6,6 +6,7 @@
 Canary값의 변조가 확인되면 프로세스 강제 종료 <br>
 Return Adress를 덮으려면 반드시 Canary를 먼저 덮어야 하므로 Canary 값을 모르는 공격자는 이 값을 변조 <br>
 
+
 ### 📄 Canary Analysis <br>
 ```c
 // Name: canary.c
@@ -18,7 +19,6 @@ int main() {
   return 0;
 }
 ```
-<br>
 
 ```
 $ gcc -o canary canary.c
@@ -51,7 +51,6 @@ Canary를 적용하여 컴파일하고 긴 입력을 주면 기존의 Segmentati
    leave
    ret
 ```
-<br>
 추가된 프롤로그의 코드에 중단점 설정하고 실행<br>
 
 ```
@@ -83,6 +82,7 @@ Breakpoint 2, 0x00000000004005c8 in main ()
 main+50은 rbp-8에 저장한 canary를 rcx로 옮기고 main+54에서 xor로 비교 <br>
 -> 두 값이 동일하면 정상 반환, 다른 경우 __stack__chk_fail 호출되며 프로그램 강제 종료 <br>
 
+
 ### 📄 Canary Generation Process <br>
-Carnary 값은 프로세시가 시작될 때, TLS에 전역변수로 저장되고, 각 함수마다 프롤로그와 에필로그에서 이 값을 참조 <br>
+Carnary 값은 프로세스가 시작될 때, TLS에 전역변수로 저장되고, 각 함수마다 프롤로그와 에필로그에서 이 값을 참조 <br>
 
