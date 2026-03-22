@@ -1,5 +1,4 @@
 # 🧠 Concept: Stack Canary <br>
---
 <br>
 ## 📌 Definition <br>
 함수의 프롤로그에서 Stack Buffer와 Return Adress 사이에 임의의 값을 삽입하고, 함수의 에필로그에서 해당 값의 변조를 확인하는 보호기법 <br>
