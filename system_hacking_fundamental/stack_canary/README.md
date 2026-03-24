@@ -195,7 +195,7 @@ int main() {
 }
 ```
 name이 memo보다 위에 위치하므로 name에 9byte를 입력하면 카나리 값에 널 바이트가 있는 것이 아닌 한 카나리 값을 얻을 수 있음 <br>
-nemo 값을 입력 받을 때 name까지 덮을 16byte + Canary 8byte를 입력
+memo 값을 입력 받을 때 name까지 덮을 16byte + Canary 8byte를 입력
 
 
 
