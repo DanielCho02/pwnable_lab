@@ -146,7 +146,56 @@ pwndbg>
 아직 어떠한 값도 설정되어 있지 않음 <br>
 <br>
 ### Canary 값 설정
+**watch: 특정 주소에 저장된 값이 변경되면 프로세스를 중단시키는 명령어**
 
+```
+pwndbg> watch *(0x7ffff7d7f740+0x28)
+Hardware watchpoint 4: *(0x7ffff7d7f740+0x28)
+pwndbg> continue
+Continuing.
+
+Hardware watchpoint 4: *(0x7ffff7d7f740+0x28)
+
+Old value = 0
+New value = 2005351680
+security_init () at rtld.c:870
+870	in rtld.c
+pwndbg> x/gx 0x7ffff7d7f740+0x28
+0x7ffff7d7f768:	0x8ab7f53277873d00
+```
+TLS+0x28의 값을 조회하면 0x8ab7f53277873d00이 Canary로 설정된 것을 확인할 수 있음<br>
+
+### Canary우회 <br>
+- 무차별 대입 (Brute Force) -> X
+- TLS 접근 <br>
+  TLS의 주소는 매 실행마다 바뀌지만 실행중에 TLS의 주소를 알 수 있고 임의 주소에 대한 읽기 또는 쓰기가 가능하다면 <br>
+  TLS에 설정된 Canary값을 읽거나 조작 가능<br>
+- Stack Canary Leak <br>
+  스택 카나리를 읽을 수 있는 취약점이 있는 경우 우회 가능 <br>
+
+```c
+// Name: bypass_canary.c
+// Compile: gcc -o bypass_canary bypass_canary.c
+
+#include <stdio.h>
+#include <unistd.h>
+
+int main() {
+  char memo[8];
+  char name[8];
+  
+  printf("name : ");
+  read(0, name, 64);
+  printf("hello %s\n", name);
+  
+  printf("memo : ");
+  read(0, memo, 64);
+  printf("memo %s\n", memo);
+  return 0;
+}
+```
+name이 memo보다 위에 위치하므로 name에 9byte를 입력하면 카나리 값에 널 바이트가 있는 것이 아닌 한 카나리 값을 얻을 수 있음 <br>
+nemo 값을 입력 받을 때 name까지 덮을 16byte + Canary 8byte를 입력
 
 
 
