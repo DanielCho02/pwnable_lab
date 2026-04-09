@@ -1,4 +1,4 @@
-# reversing_writeups
+# 🔁 reversing_writeups
 
 Personal research and practice repository for reverse engineering, malware analysis, and binary unpacking.
 
