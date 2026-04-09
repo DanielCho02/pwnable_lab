@@ -39,3 +39,15 @@ Personal research and practice repository for binary exploitation, reverse engin
 │   └── README.md
 └── web_hacking/                      # Web Hacking
     └── README.md
+```
+
+## 🧠 Study Method
+- Analyze vulnerability and constraints
+- Understand root cause (Memory / Logic / Architecture)
+- Develop exploit or bypass method
+- Document reasoning and key takeaways
+
+## 🚀 Progress Path
+- System Hacking: https://dreamhack.io/lecture/paths/system-hacking-fundamental
+- Reverse Engineering: https://dreamhack.io/lecture/paths/reverse-engineering-fundamental
+- Web Hacking: https://dreamhack.io/lecture/paths/web-hacking-fundamental
