@@ -1,10 +1,10 @@
 # 🧠 Concept: Command Injection
 
 ## 📌 Definition
-Injection = 악의적인 데이터를 프로그램에 입력하여 시스템 명령어, 코드, DB 쿼리 등으로 실행되게 하는 기법
-Command Injection = 사용자의 입력을 시스템 명령어로 실행하게 하는 것, 명령어를 실행하는 함수에 사용자가 임의의 인자를 전달할 수 있을 때 발생
-Meta Character = 셸 프로그램에서 특수하기 처리하는 문자
-
+Injection = 악의적인 데이터를 프로그램에 입력하여 시스템 명령어, 코드, DB 쿼리 등으로 실행되게 하는 기법   
+Command Injection = 사용자의 입력을 시스템 명령어로 실행하게 하는 것, 명령어를 실행하는 함수에 사용자가 임의의 인자를 전달할 수 있을 때 발생    
+Meta Character = 셸 프로그램에서 특수하기 처리하는 문자    
+ 
 ## 📄 Meta Character
 | 문자 | 의미 |
 |---|---|
